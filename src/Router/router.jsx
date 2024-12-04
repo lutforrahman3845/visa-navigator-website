@@ -7,6 +7,7 @@ import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import Addvisa from "../Pages/Addvisa";
 import PrivateRoute from "./PrivateRoute";
+import Home from "../Pages/Home";
 
 const router = createBrowserRouter([
     {
@@ -14,6 +15,10 @@ const router = createBrowserRouter([
       element: <Root></Root>,
       errorElement:<Error></Error>,
       children:[
+        {
+          path: "/",
+          element:<Home></Home>
+        },
         {
           path: "/login",
           element: <Login></Login>
