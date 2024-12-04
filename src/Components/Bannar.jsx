@@ -44,7 +44,7 @@ const Bannar = () => {
           <img
             src={bnnr2}
             alt="Bannar image"
-            className="absolute right-0 rounded-sm z-50"
+            className="absolute right-0 rounded-sm z-40"
           />
           <Lottie className="absolute left-0 top-1/2 -translate-y-1/2" animationData={plane1} loop={true} />
           <img
