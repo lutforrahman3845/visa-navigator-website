@@ -3,6 +3,9 @@ import passport1 from "../assets/passport1.png";
 import passport2 from "../assets/pas.png";
 import passport3 from "../assets/passport2.png";
 import passport4 from "../assets/passport3.png";
+import blog1 from "../assets/blog.jpg";
+import blog2 from "../assets/blog2.jpg";
+import blog3 from "../assets/blog3.jpg";
 
 const Main = ({ visas }) => {
   return (
@@ -127,8 +130,7 @@ const Main = ({ visas }) => {
                 Documentation & Eligibility Check, providing you with peace of
                 mind and increased chances of approval.Get comprehensive support
                 with our Documentation & Eligibility Check to verify your
-                documents and confirm your eligibility before submitting your
-                visa application.
+                documents .
               </p>
             </div>
           </div>
@@ -158,8 +160,112 @@ const Main = ({ visas }) => {
                 Follow up & Approval
               </h1>
               <p className="text-sm  text-center mx-auto font-normal text-secondary dark:text-gray-300 max-w-xl pt-2">
-              Stay informed throughout your visa process with our diligent follow-up services, ensuring timely updates and smooth progress toward approval.Achieve your visa goals with our comprehensive follow-up and approval support, guiding you through each step until your visa is successfully granted
+                Stay informed throughout your visa process with our diligent
+                follow-up services, ensuring timely updates and smooth progress
+                toward approval.Achieve your visa goals with our comprehensive
+                follow-up and approval support, guiding you through each step
+                until your visa is successfully granted
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* Latest blog & news */}
+      <section className="pb-10 md:pb-16 xl:pb-20 px-2">
+        <div className="flex flex-col md:flex-row md:items-center justify-between">
+          <div>
+            <p className="text-sm md:text-base text-secondary dark:text-gray-300 font-normal   pt-2">
+              Latest News & Blogs
+            </p>
+            <h1 className="text-2xl md:text-3xl lg:text-4xl text-secondary dark:text-white font-bold max-w-lg">
+              Discover Our Latest News And Expert Blogs
+            </h1>
+          </div>
+          <button className="bg-primary py-2 px-3 rounded-md mt-4 text-white font-medium">
+            View all
+          </button>
+        </div>
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 gap-4 xl:gap-8">
+          <div className=" row-span-2 bg-base-100  shadow-xl rounded-lg">
+            <div>
+              <img
+                className="rounded-t-md w-full h-[100px] md:h-[400px] object-cover"
+                src={blog1}
+                alt="blog image"
+              />
+            </div>
+            <div className="p-5">
+              <h2 className="card-title">Global Perspectives</h2>
+              <p className="text-sm   mx-auto font-normal text-secondary dark:text-gray-300  py-2">
+                Gain insights into diverse cultures and international trends
+                with our Global Perspectives, enriching your understanding of
+                the world
+              </p>
+              <div className="card-actions py-2">
+                <div className=" text-xs rounded-full bg-primary/30 dark:bg-primary text-thrid dark:text-white font-medium px-3  py-2">
+                  admin
+                </div>
+                <div className=" text-xs rounded-full bg-primary/30 dark:bg-primary text-thrid dark:text-white font-medium px-3 py-2">
+                  July 24, 2024
+                </div>
+                <div className=" text-xs rounded-full bg-primary/30 dark:bg-primary text-thrid dark:text-white font-medium px-3 py-2">
+                  Travel
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className=" row-span-1 bg-base-100  shadow-xl rounded-lg">
+            <div>
+              <img
+                className="rounded-t-md w-full h-[100px] object-cover"
+                src={blog2}
+                alt="blog image"
+              />
+            </div>
+            <div className="p-5">
+              <h2 className="card-title">Destination Guides</h2>
+              <p className="text-sm   mx-auto font-normal text-secondary dark:text-gray-300  py-2">
+                Unlock expert travel tips and local insights with our
+                Destination Guides, ensuring memorable and well-informed
+                adventures.
+              </p>
+              <div className="card-actions py-2">
+                <div className=" text-xs rounded-full bg-primary/30 dark:bg-primary text-thrid dark:text-white font-medium px-3  py-2">
+                  admin
+                </div>
+                <div className=" text-xs rounded-full bg-primary/30 dark:bg-primary text-thrid dark:text-white font-medium px-3 py-2">
+                  Juune 24, 2024
+                </div>
+                <div className=" text-xs rounded-full bg-primary/30 dark:bg-primary text-thrid dark:text-white font-medium px-3 py-2">
+                  Destination Guides
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className=" row-span-1 bg-base-100  shadow-xl rounded-lg">
+            <div>
+              <img
+                className="rounded-t-md w-full h-[100px] object-cover"
+                src={blog3}
+                alt="blog image"
+              />
+            </div>
+            <div className="p-5">
+              <h2 className="card-title">Country-Specific Visas</h2>
+              <p className="text-sm   mx-auto font-normal text-secondary dark:text-gray-300  py-2">
+              Navigate the complexities of travel with our detailed guides on Country-Specific Visas, tailored to each destination's unique requirements.
+              </p>
+              <div className="card-actions py-2">
+                <div className=" text-xs rounded-full bg-primary/30 dark:bg-primary text-thrid dark:text-white font-medium px-3  py-2">
+                  admin
+                </div>
+                <div className=" text-xs rounded-full bg-primary/30 dark:bg-primary text-thrid dark:text-white font-medium px-3 py-2">
+                  March 24, 2024
+                </div>
+                <div className=" text-xs rounded-full bg-primary/30 dark:bg-primary text-thrid dark:text-white font-medium px-3 py-2">
+                Country-Specific Visas
+                </div>
+              </div>
             </div>
           </div>
         </div>
