@@ -152,7 +152,7 @@ const Navbar = () => {
                 )}
                 <ul
                   tabIndex={1}
-                  className="dropdown-content menu bg-gray-700 rounded-box z-[1] w-52 p-2 shadow"
+                  className="dropdown-content menu bg-gray-700 rounded-box z-50 w-52 p-2 shadow"
                 >
                   <li className="text-base text-white hover:bg-gray-900 rounded-lg font-semibold">
                     <a>{user?.displayName}</a>
@@ -200,7 +200,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      <DisclosurePanel>
+      <DisclosurePanel >
         <div className="space-y-4 px-2 pb-3 pt-2 list-none lg:hidden">
           {links}
         </div>

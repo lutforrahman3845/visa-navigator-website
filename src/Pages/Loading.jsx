@@ -1,7 +1,9 @@
+import Lottie from "lottie-react";
+import loader from "../assets//loader.json";
 const Loading = () => {
     return (
         <div className="flex justify-center min-h-screen dark:bg-secondary">
-            <span className="loading loading-ring loading-lg"></span>
+            <Lottie className="w-36" animationData={loader} loop={true} />
         </div>
     );
 };

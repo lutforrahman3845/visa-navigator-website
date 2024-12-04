@@ -60,7 +60,7 @@ const Addvisa = () => {
   };
 
   return (
-    <div className="dark:bg-secondary py-10 mx-2">
+    <div className="dark:bg-secondary py-10 px-2">
       <div className="max-w-4xl mx-auto p-6 bg-white shadow-xl dark:bg-gray-800 rounded-lg ">
         <h1 className="text-2xl font-bold mb-6">Add Visa</h1>
         <form onSubmit={handleAddVisa}>
