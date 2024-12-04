@@ -1,65 +1,128 @@
+import { useContext } from "react";
+import { AuthContext } from "../Context/AuthProvider";
+import Swal from "sweetalert2";
+
 const Addvisa = () => {
+  const { user } = useContext(AuthContext);
+  const handleAddVisa = (e) => {
+    e.preventDefault();
+
+    const form = e.target;
+
+    const uId = user?.uid;
+
+    const photo = form.countryImage.value;
+    const name = form.countryName.value;
+    const visaType = form.visaType.value;
+    const processingTime = form.processingTime.value;
+
+    //  checkbox values
+    const requiredDocuments = Array.from(form.requiredDocuments)
+      .filter((checkbox) => checkbox.checked)
+      .map((checkbox) => checkbox.value);
+
+    const description = form.description.value;
+    const ageRestriction = form.ageRestriction.value;
+    const fee = form.fee.value;
+    const validity = form.validity.value;
+    const applicationMethod = form.applicationMethod.value;
+
+    const visaData = {
+      uId,
+      photo,
+      name,
+      visaType,
+      processingTime,
+      requiredDocuments,
+      description,
+      ageRestriction,
+      fee,
+      validity,
+      applicationMethod,
+    };
+    fetch("http://localhost:5000/visas", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(visaData),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        Swal.fire({
+            title: "Congratulation!",
+            text: "Visa added successfully",
+            icon: "success"
+          });
+        form.reset();
+      });
+  };
+
   return (
-    <div className="dark:bg-secondary py-10">
-      <div class="max-w-4xl mx-auto p-6 bg-white shadow-xl dark:bg-gray-800 rounded-lg ">
-        <h1 class="text-2xl font-bold mb-6">Add Visa</h1>
-        <form>
-          <div class="mb-4">
-            <label class="block text-sm font-medium mb-2">
+    <div className="dark:bg-secondary py-10 mx-2">
+      <div className="max-w-4xl mx-auto p-6 bg-white shadow-xl dark:bg-gray-800 rounded-lg ">
+        <h1 className="text-2xl font-bold mb-6">Add Visa</h1>
+        <form onSubmit={handleAddVisa}>
+          <div className="mb-4">
+            <label className="block text-sm font-medium mb-2">
               Country Image URL
             </label>
             <input
               type="text"
               name="countryImage"
-              class="input input-bordered w-full"
+              className="input input-bordered w-full"
               placeholder="Enter image URL"
               required
             />
           </div>
 
-          <div class="mb-4">
-            <label class="block text-sm font-medium mb-2">Country Name</label>
+          <div className="mb-4">
+            <label className="block text-sm font-medium mb-2">
+              Country Name
+            </label>
             <input
               type="text"
               name="countryName"
-              class="input input-bordered w-full"
+              className="input input-bordered w-full"
               placeholder="Enter country name"
               required
             />
           </div>
 
-          <div class="mb-4">
-            <label class="block text-sm font-medium mb-2">Visa Type</label>
+          <div className="mb-4">
+            <label className="block text-sm font-medium mb-2">Visa Type</label>
             <select
               name="visaType"
-              class="select select-bordered w-full"
+              className="select select-bordered w-full"
               required
             >
               <option value="Tourist visa">Tourist Visa</option>
               <option value="Student visa">Student Visa</option>
               <option value="Official visa">Official Visa</option>
+              <option value="Working visa">Working Visa</option>
             </select>
           </div>
 
-          <div class="mb-4">
-            <label class="block text-sm font-medium mb-2">
+          <div className="mb-4">
+            <label className="block text-sm font-medium mb-2">
               Processing Time
             </label>
             <input
               type="text"
               name="processingTime"
-              class="input input-bordered w-full"
+              className="input input-bordered w-full"
               placeholder="Enter processing time"
               required
             />
           </div>
 
-          <div class="mb-4">
-            <label class="block text-sm font-medium mb-2">
+          <div className="mb-4">
+            <label className="block text-sm font-medium mb-2">
               Required Documents
             </label>
-            <div class="space-y-2">
-              <label class="flex items-center space-x-2">
+            <div className="space-y-2">
+              <label className="flex items-center space-x-2">
                 <input
                   type="checkbox"
                   name="requiredDocuments"
@@ -67,7 +130,7 @@ const Addvisa = () => {
                 />
                 <span>Valid Passport</span>
               </label>
-              <label class="flex items-center space-x-2">
+              <label className="flex items-center space-x-2">
                 <input
                   type="checkbox"
                   name="requiredDocuments"
@@ -75,7 +138,7 @@ const Addvisa = () => {
                 />
                 <span>Visa Application Form</span>
               </label>
-              <label class="flex items-center space-x-2">
+              <label className="flex items-center space-x-2">
                 <input
                   type="checkbox"
                   name="requiredDocuments"
@@ -86,67 +149,72 @@ const Addvisa = () => {
             </div>
           </div>
 
-          <div class="mb-4">
-            <label class="block text-sm font-medium mb-2">Description</label>
+          <div className="mb-4">
+            <label className="block text-sm font-medium mb-2">
+              Description
+            </label>
             <textarea
               name="description"
-              class="textarea textarea-bordered w-full"
+              className="textarea textarea-bordered w-full"
               placeholder="Enter description"
               rows="3"
               required
             ></textarea>
           </div>
 
-          <div class="mb-4">
-            <label class="block text-sm font-medium mb-2">
+          <div className="mb-4">
+            <label className="block text-sm font-medium mb-2">
               Age Restriction
             </label>
             <input
               type="number"
               name="ageRestriction"
-              class="input input-bordered w-full"
+              className="input input-bordered w-full"
               placeholder="Enter age restriction"
               required
             />
           </div>
 
-          <div class="mb-4">
-            <label class="block text-sm font-medium mb-2">Fee</label>
+          <div className="mb-4">
+            <label className="block text-sm font-medium mb-2">Fee</label>
             <input
               type="number"
               name="fee"
-              class="input input-bordered w-full"
+              className="input input-bordered w-full"
               placeholder="Enter fee"
               required
             />
           </div>
 
-          <div class="mb-4">
-            <label class="block text-sm font-medium mb-2">Validity</label>
+          <div className="mb-4">
+            <label className="block text-sm font-medium mb-2">Validity</label>
             <input
               type="text"
               name="validity"
-              class="input input-bordered w-full"
+              className="input input-bordered w-full"
               placeholder="Enter validity period"
               required
             />
           </div>
 
-          <div class="mb-4">
-            <label class="block text-sm font-medium mb-2">
+          <div className="mb-4">
+            <label className="block text-sm font-medium mb-2">
               Application Method
             </label>
             <input
               type="text"
               name="applicationMethod"
-              class="input input-bordered w-full"
+              className="input input-bordered w-full"
               placeholder="Enter application method"
               required
             />
           </div>
 
           <div>
-            <button type="submit" class="btn text-white shadow-sm w-full bg-primary">
+            <button
+              type="submit"
+              className="btn text-white shadow-sm w-full bg-primary"
+            >
               Add Visa
             </button>
           </div>

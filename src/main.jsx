@@ -6,6 +6,7 @@ import router from "./Router/router";
 import ThemeProvider from "./Context/ThemeProvider";
 import AuthProvider from "./Context/AuthProvider";
 
+
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <ThemeProvider>
