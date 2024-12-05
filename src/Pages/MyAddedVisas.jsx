@@ -15,6 +15,24 @@ const MyAddedVisas = () => {
     setModalData(visa);
     document.getElementById("my_modal_1").showModal();
   };
+  const handleDelete = (visaToDelete) => {
+    fetch(`http://localhost:5000/visas/${visaToDelete?._id}`, {
+      method: "DELETE",
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.deletedCount > 0) {
+          setMyAddedVisas((prev) =>
+            prev.filter((visa) => visa._id !== visaToDelete._id)
+          );
+        }
+      });
+      Swal.fire({
+        title: "Congratulation!",
+        text: "Visa deleted successfully",
+        icon: "success",
+      });
+  };
 
   const [selectedVisaType, setSelectedVisaType] = useState("");
   useEffect(() => {
@@ -138,7 +156,10 @@ const MyAddedVisas = () => {
             >
               Update
             </button>
-            <button className="bg-primary py-2 px-3 rounded-md mt-4 text-white font-medium">
+            <button
+              onClick={() => handleDelete(visa)}
+              className="bg-primary py-2 px-3 rounded-md mt-4 text-white font-medium"
+            >
               Delete
             </button>
           </div>
