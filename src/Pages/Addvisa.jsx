@@ -48,8 +48,7 @@ const Addvisa = () => {
       body: JSON.stringify(visaData),
     })
       .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
+      .then(() => {
         Swal.fire({
             title: "Congratulation!",
             text: "Visa added successfully",

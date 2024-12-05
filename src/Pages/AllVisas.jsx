@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 
 const AllVisas = () => {
+  const navigate= useNavigate()
   const visas = useLoaderData();
   const [filteredVisas, setFilteredVisas] = useState(visas);
   const handleFilter = (e) => {
@@ -91,7 +92,7 @@ const AllVisas = () => {
               </h4>
             </div>
             <div>
-              <button className="bg-primary py-2 px-3 rounded-md mt-4 text-white font-medium">
+              <button onClick={()=> navigate(`/visa_details/${visa?._id}`)} className="bg-primary py-2 px-3 rounded-md mt-4 text-white font-medium">
                 See Details
               </button>
             </div>

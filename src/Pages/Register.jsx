@@ -43,9 +43,9 @@ const Register = () => {
     createNewUser(email, password)
       .then((result) => {
         const usr = result.user;
-        setUser(usr);
         profileUpDate({ displayName: name, photoURL: photo })
-          .then(() => {
+        .then(() => {
+            setUser(usr);
             e.target.reset()
             navigate("/");
           })

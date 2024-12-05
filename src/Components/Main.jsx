@@ -6,9 +6,10 @@ import passport4 from "../assets/passport3.png";
 import blog1 from "../assets/blog.jpg";
 import blog2 from "../assets/blog2.jpg";
 import blog3 from "../assets/blog3.jpg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Main = ({ visas }) => {
+  const navigate = useNavigate()
   return (
     <main className="dark:bg-secondary  md:px-6">
       {/* Latest visas section */}
@@ -66,7 +67,7 @@ const Main = ({ visas }) => {
                   {visa?.applicationMethod}
                 </span>
               </h4>
-              <button className="bg-primary py-2 px-3 rounded-md mt-4 text-white font-medium">
+              <button onClick={()=> navigate(`/visa_details/${visa?._id}`)} className="bg-primary py-2 px-3 rounded-md mt-4 text-white font-medium">
                 See Details
               </button>
             </div>
