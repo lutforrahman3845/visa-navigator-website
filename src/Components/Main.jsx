@@ -6,6 +6,7 @@ import passport4 from "../assets/passport3.png";
 import blog1 from "../assets/blog.jpg";
 import blog2 from "../assets/blog2.jpg";
 import blog3 from "../assets/blog3.jpg";
+import { Link } from "react-router-dom";
 
 const Main = ({ visas }) => {
   return (
@@ -19,7 +20,7 @@ const Main = ({ visas }) => {
           Explore the most recent visa updates and application processes to stay
           informed and prepared for your travels.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 md:gap-6 mt-10 px-2 ">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 md:gap-6 my-10 px-2 ">
           {visas.map((visa, index) => (
             <div key={index} className="p-4 border rounded-lg w-full">
               <img
@@ -71,9 +72,9 @@ const Main = ({ visas }) => {
             </div>
           ))}
         </div>
-        <button className="bg-red-900 py-2 px-4 rounded-md mt-4 ml-2 text-white font-medium">
+        <Link to={"/all_visas"} className="bg-red-900 py-2 px-4 rounded-md mt-4 ml-2 text-white font-medium">
           See all visas
-        </button>
+        </Link>
       </section>
       {/* Work Process */}
       <section className="pb-10 md:pb-16 xl:pb-20">

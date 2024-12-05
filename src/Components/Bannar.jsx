@@ -9,9 +9,11 @@ import bnnr3 from "../assets/hero-bg-3.png";
 import bnnr4 from "../assets/banner-bg-4-shape.png";
 import Lottie from "lottie-react";
 import plane1 from "../assets/plane1.json";
+import { useNavigate } from "react-router-dom";
 
 
 const Bannar = () => {
+  const navigate = useNavigate()
   return (
     <div className="relative  dark:bg-secondary md:px-6 pt-2  ">
       <Swiper
@@ -37,7 +39,7 @@ const Bannar = () => {
                 Our team of seasoned professionals is committed to guiding you through every step of the process, ensuring a seamless transition to your new home.
               </span>{" "}
             </p>
-            <button className="py-2 px-3  text-xs md:text-base rounded-md bg-[#054833] text-white mt-3 md:mt-6 lg:mt-8">
+            <button onClick={()=> navigate('/all_visas')} className="py-2 px-3  text-xs md:text-base rounded-md bg-[#054833] text-white mt-3 md:mt-6 lg:mt-8">
               Get start
             </button>
           </div>
@@ -64,7 +66,7 @@ const Bannar = () => {
               Our expert consultants possess a deep understanding of the visa application process and are committed to providing personalized support tailored to your unique needs.
               </span>{" "}
             </p>
-            <button className="py-2 px-3 text-xs md:text-base rounded-md bg-primary text-white mt-3 md:mt-6 lg:mt-8">
+            <button onClick={()=> navigate('/all_visas')} className="py-2 px-3 text-xs md:text-base rounded-md bg-primary text-white mt-3 md:mt-6 lg:mt-8">
               Get start
             </button>
           </div>
@@ -89,7 +91,7 @@ const Bannar = () => {
               Our experienced team guides you through each step, providing personalized support tailored to your unique needs.
               </span>
             </p>
-            <button className="py-2 px-3  text-xs md:text-base rounded-md bg-primary text-white mt-3 md:mt-6 lg:mt-8">
+            <button onClick={()=> navigate('/all_visas')} className="py-2 px-3  text-xs md:text-base rounded-md bg-primary text-white mt-3 md:mt-6 lg:mt-8">
               Get start
             </button>
           </div>
