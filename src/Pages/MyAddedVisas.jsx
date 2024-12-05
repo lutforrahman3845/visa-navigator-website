@@ -7,7 +7,7 @@ const MyAddedVisas = () => {
   const [modalData, setModalData] = useState(null);
   const { user } = useContext(AuthContext);
   useEffect(() => {
-    fetch(`http://localhost:5000/visas/user/${user.uid}`)
+    fetch(`http://localhost:5000/visas/user/${user?.uid}`)
       .then((res) => res.json())
       .then((data) => setMyAddedVisas(data));
   }, [user]);
@@ -96,7 +96,7 @@ const MyAddedVisas = () => {
       });
   };
   return (
-    <div className="py-10 md:py-16 xl:py-20 px-2">
+    <div className="dark:bg-secondary py-10 md:py-16 px-2 ">
       <h1 className="text-2xl md:text-3xl lg:text-4xl text-secondary dark:text-white font-bold text-center">
         My added visas
       </h1>

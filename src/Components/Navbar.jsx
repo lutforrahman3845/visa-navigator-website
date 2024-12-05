@@ -87,7 +87,7 @@ const Navbar = () => {
                   : "text-gray-300 hover:bg-gray-700 hover:text-white text-base font-medium"
               }`
             }
-            to="/my-profile"
+            to="/visa_applications"
           >
             My Visa applications
           </NavLink>

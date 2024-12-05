@@ -27,6 +27,7 @@ const VisaDetails = () => {
     const visaType = singleVisa?.visaType;
     const processingTime = singleVisa?.processingTime;
     const applicationMethod = singleVisa?.applicationMethod;
+    const validity = singleVisa?.validity;
     const userUid = user?.uid;
     const email = form.email.value;
     const firstName = form.firstName.value;
@@ -39,6 +40,7 @@ const VisaDetails = () => {
       lastName,
       appliedDate,
       fee,
+      validity,
       photo,
       country_name,
       visaType,
