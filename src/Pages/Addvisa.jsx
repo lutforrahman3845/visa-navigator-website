@@ -40,7 +40,7 @@ const Addvisa = () => {
       validity,
       applicationMethod,
     };
-    fetch("http://localhost:5000/visas", {
+    fetch("https://assignment-10-server-pied-phi.vercel.app/visas", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

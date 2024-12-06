@@ -22,7 +22,7 @@ const router = createBrowserRouter([
         {
           path: "/",
           element:<Home></Home>,
-          loader: ()=> fetch('http://localhost:5000/visas'),
+          loader: ()=> fetch('https://assignment-10-server-pied-phi.vercel.app/visas'),
         },
         {
           path: "/login",
@@ -39,12 +39,12 @@ const router = createBrowserRouter([
         {
           path:"/all_visas",
           element:<AllVisas></AllVisas>,
-          loader: ()=> fetch('http://localhost:5000/visas'),
+          loader: ()=> fetch('https://assignment-10-server-pied-phi.vercel.app/visas'),
         },
         {
           path: "/visa_details/:id",
           element: <PrivateRoute><VisaDetails></VisaDetails></PrivateRoute>,
-          loader : ({params})=> fetch(`http://localhost:5000/visas/single/${params.id}`)
+          loader : ({params})=> fetch(`https://assignment-10-server-pied-phi.vercel.app/visas/single/${params.id}`)
         },
         {
           path: "/added_visas",

@@ -9,8 +9,8 @@ const AllVisas = () => {
     const selectedType = e.target.value;
     const url =
       selectedType === "All visa"
-        ? "http://localhost:5000/visas"
-        : `http://localhost:5000/visas/${selectedType}`;
+        ? "https://assignment-10-server-pied-phi.vercel.app/visas"
+        : `https://assignment-10-server-pied-phi.vercel.app/visas/${selectedType}`;
 
     fetch(url)
       .then((res) => res.json())

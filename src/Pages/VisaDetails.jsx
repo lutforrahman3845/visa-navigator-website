@@ -48,7 +48,7 @@ const VisaDetails = () => {
       applicationMethod,
       userUid,
     };
-    fetch("http://localhost:5000/apply", {
+    fetch("https://assignment-10-server-pied-phi.vercel.app/apply", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -7,7 +7,7 @@ const MyAddedVisas = () => {
   const [modalData, setModalData] = useState(null);
   const { user } = useContext(AuthContext);
   useEffect(() => {
-    fetch(`http://localhost:5000/visas/user/${user?.uid}`)
+    fetch(`https://assignment-10-server-pied-phi.vercel.app/visas/user/${user?.uid}`)
       .then((res) => res.json())
       .then((data) => setMyAddedVisas(data));
   }, [user]);
@@ -16,7 +16,7 @@ const MyAddedVisas = () => {
     document.getElementById("my_modal_1").showModal();
   };
   const handleDelete = (visaToDelete) => {
-    fetch(`http://localhost:5000/visas/${visaToDelete?._id}`, {
+    fetch(`https://assignment-10-server-pied-phi.vercel.app/visas/${visaToDelete?._id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
@@ -71,7 +71,7 @@ const MyAddedVisas = () => {
       validity,
       applicationMethod,
     };
-    fetch(`http://localhost:5000/visas/${modalData?._id}`, {
+    fetch(`https://assignment-10-server-pied-phi.vercel.app/visas/${modalData?._id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

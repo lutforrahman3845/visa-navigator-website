@@ -6,20 +6,20 @@ const MyVisaApplication = () => {
   const { user } = useContext(AuthContext);
   const [myVisasApplication, setMyVisasApplication] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:5000/apply/${user?.email}`)
+    fetch(`https://assignment-10-server-pied-phi.vercel.app/apply/${user?.email}`)
       .then((res) => res.json())
       .then((data) => setMyVisasApplication(data));
   }, [user]);
   const [search, setSearch] = useState("");
   useEffect(() => {
     fetch(
-      `http://localhost:5000/apply/search/${user?.email}?searchParams=${search}`
+      `https://assignment-10-server-pied-phi.vercel.app/apply/search/${user?.email}?searchParams=${search}`
     )
       .then((res) => res.json())
       .then((data) => setMyVisasApplication(data));
   }, [search]);
   const handleCancle = (visaToDelete) => {
-    fetch(`http://localhost:5000/apply/${visaToDelete?._id}`, {
+    fetch(`https://assignment-10-server-pied-phi.vercel.app/apply/${visaToDelete?._id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
