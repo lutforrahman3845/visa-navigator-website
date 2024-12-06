@@ -1,11 +1,12 @@
 import React, { useContext, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Context/AuthProvider";
 import googleIcon from "../assets/Google.png";
 import { GoogleAuthProvider } from "firebase/auth";
 
 const Register = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const [showPassword, setShowPassword] = useState(false);
   const { createNewUser, setUser, createNewUserWithGoogle, profileUpDate } =
     useContext(AuthContext);
@@ -47,7 +48,7 @@ const Register = () => {
         .then(() => {
             setUser(usr);
             e.target.reset()
-            navigate("/");
+            navigate(location?.state ? location.state : '/' );
           })
           .catch((error) => setError(error.message));
       })
@@ -62,7 +63,7 @@ const Register = () => {
       .then((result) => {
         const usr = result.user;
         setUser(usr);
-        navigate("/");
+        navigate(location?.state ? location?.state : '/' );
       })
       .catch((error) => {
         setError(error.message);
