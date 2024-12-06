@@ -1,8 +1,18 @@
-# React + Vite
+# Project Name
+Visify - visa navigator wensite
+# Purpose
+your one-stop destination for all visa-related needs. Whether you're planning to study, work, or simply explore the world, we provide comprehensive and up-to-date information to make your visa application process seamless and stress-free. Our platform offers detailed guides, personalized consultations, and reliable support to help
+### Live Demo
+https://visa-navigator-65e95.web.app/
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Key Features
+- **Add visa**.
+- **Update visa**
+- **Delete visa** 
+- **Apply for  visa** 
+- **Filter  visa type** 
+- **Search applied visa by country name** 
+# npm packages
+- Lottie React
+- React-simple-typewriter
