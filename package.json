@@ -1,8 +1,20 @@
 {
   "name": "assignment-10",
-  "private": true,
   "version": "0.0.0",
+  "private": true,
+  "description": "Visify - visa navigator wensite # Purpose your one-stop destination for all visa-related needs. Whether you're planning to study, work, or simply explore the world, we provide comprehensive and up-to-date information to make your visa application process seamless and stress-free. Our platform offers detailed guides, personalized consultations, and reliable support to help ### Live Demo https://visa-navigator-65e95.web.app/",
+  "homepage": "https://github.com/programming-hero-web-course2/b10-a10-client-side-lutforrahman3845#readme",
+  "bugs": {
+    "url": "https://github.com/programming-hero-web-course2/b10-a10-client-side-lutforrahman3845/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/programming-hero-web-course2/b10-a10-client-side-lutforrahman3845.git"
+  },
+  "license": "ISC",
+  "author": "",
   "type": "module",
+  "main": "eslint.config.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

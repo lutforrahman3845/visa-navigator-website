@@ -9,7 +9,7 @@ const Root = () => {
     window.scrollTo(0, 0);
   }, [location]);
   return (
-    <div className="min-h-screen flex flex-col dark:bg-white overflow-x-hidden">
+    <div className="min-h-screen flex flex-col  ">
       <Navbar />
       <main className="flex-grow">
         <Outlet />

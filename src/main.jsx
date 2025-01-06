@@ -5,7 +5,7 @@ import { RouterProvider } from "react-router-dom";
 import router from "./Router/router";
 import ThemeProvider from "./Context/ThemeProvider";
 import AuthProvider from "./Context/AuthProvider";
-
+import Loading from "./Pages/Loading";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
