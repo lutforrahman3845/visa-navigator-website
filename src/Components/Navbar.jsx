@@ -55,6 +55,20 @@ const Navbar = () => {
                 : "text-gray-300 hover:bg-gray-700 hover:text-white text-base font-medium"
             }`
           }
+          to="/about-us"
+        >
+          About Us
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          className={({ isActive }) =>
+            ` px-3 py-2 rounded-lg ${
+              isActive
+                ? "text-base text-white bg-gray-900  font-semibold"
+                : "text-gray-300 hover:bg-gray-700 hover:text-white text-base font-medium"
+            }`
+          }
           to="/all_visas"
         >
           All visas

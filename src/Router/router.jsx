@@ -12,6 +12,7 @@ import AllVisas from "../Pages/AllVisas";
 import VisaDetails from "../Pages/VisaDetails";
 import MyAddedVisas from "../Pages/MyAddedVisas";
 import MyVisaApplication from "../Pages/MyVisaApplication";
+import AboutUS from "../Pages/AboutUS";
 
 const router = createBrowserRouter([
     {
@@ -23,6 +24,11 @@ const router = createBrowserRouter([
           path: "/",
           element:<Home></Home>,
           loader: ()=> fetch('https://assignment-10-server-pied-phi.vercel.app/visas'),
+        },
+        {
+          path: "/about-us",
+          element: <AboutUS></AboutUS>
+
         },
         {
           path: "/login",

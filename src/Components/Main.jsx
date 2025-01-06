@@ -7,13 +7,15 @@ import blog1 from "../assets/blog.jpg";
 import blog2 from "../assets/blog2.jpg";
 import blog3 from "../assets/blog3.jpg";
 import { Link, useNavigate } from "react-router-dom";
+import About from "./About";
 
 const Main = ({ visas }) => {
   const navigate = useNavigate()
   return (
     <main className="dark:bg-secondary  md:px-6">
+      <About/>
       {/* Latest visas section */}
-      <section className="py-10 md:py-16 xl:py-20 ">
+      <section className="pt-10 md:pt-16 xl:pt-20 ">
         <h1 className="text-2xl md:text-3xl lg:text-4xl text-secondary dark:text-white font-bold text-center">
           Latest visas
         </h1>
