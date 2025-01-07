@@ -74,6 +74,20 @@ const Navbar = () => {
           All visas
         </NavLink>
       </li>
+      <li>
+        <NavLink
+          className={({ isActive }) =>
+            ` px-3 py-2 rounded-lg ${
+              isActive
+                ? "text-base text-white bg-gray-900  font-semibold"
+                : "text-gray-300 hover:bg-gray-700 hover:text-white text-base font-medium"
+            }`
+          }
+          to="/contact-us"
+        >
+          Contact Us
+        </NavLink>
+      </li>
       {user && (
         <li>
           <NavLink

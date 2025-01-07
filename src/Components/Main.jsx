@@ -19,7 +19,7 @@ const Main = ({ visas }) => {
         <h1 className="text-2xl md:text-3xl lg:text-4xl text-secondary dark:text-white font-bold text-center">
           Latest visas
         </h1>
-        <p className="text-sm md:text-base text-secondary dark:text-gray-300 font-normal text-center max-w-xl mx-auto pt-2">
+        <p className="text-base md:text-lg text-gray-600 dark:text-gray-300 font-normal text-center max-w-xl mx-auto pt-2">
           Explore the most recent visa updates and application processes to stay
           informed and prepared for your travels.
         </p>
@@ -84,7 +84,7 @@ const Main = ({ visas }) => {
         <h1 className="text-2xl md:text-3xl lg:text-4xl text-secondary dark:text-white font-bold text-center">
           Work Process
         </h1>
-        <p className="text-sm md:text-base text-center mx-auto font-normal text-secondary dark:text-gray-300 max-w-xl pt-2">
+        <p className="text-base md:text-lg text-gray-600 dark:text-gray-300 text-center mx-auto font-normal  max-w-xl pt-2">
           Our Streamlined{" "}
           <span className="font-bold text-primary">
             <Typewriter
@@ -105,7 +105,7 @@ const Main = ({ visas }) => {
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4  gap-8 pt-16 px-2">
           <div className="flex flex-col items-center justify-end">
-            <div className="p-4 rounded-full shadow-md w-fit  bg-[#ff7729]">
+            <div className="p-4 rounded-full shadow-md w-fit  bg-primary/30">
               <img className="w-10" src={passport1} alt="passport icon" />
             </div>
             <div className="p-3 rounded-md shadow-md text-center dark:bg-gray-800 mt-3 ">
@@ -122,7 +122,7 @@ const Main = ({ visas }) => {
             </div>
           </div>
           <div className="flex flex-col items-center justify-end">
-            <div className="p-4 rounded-full shadow-md w-fit  bg-[#ff7729]">
+            <div className="p-4 rounded-full shadow-md w-fit  bg-primary/30">
               <img className="w-10" src={passport2} alt="passport icon" />
             </div>
             <div className="p-3 rounded-md shadow-md text-center dark:bg-gray-800 mt-3 ">
@@ -139,7 +139,7 @@ const Main = ({ visas }) => {
             </div>
           </div>
           <div className="flex flex-col items-center justify-end">
-            <div className="p-4 rounded-full shadow-md w-fit  bg-[#ff7729]">
+            <div className="p-4 rounded-full shadow-md w-fit  bg-primary/30">
               <img className="w-10" src={passport3} alt="passport icon" />
             </div>
             <div className="p-3 rounded-md shadow-md text-center dark:bg-gray-800 mt-3 ">
@@ -156,7 +156,7 @@ const Main = ({ visas }) => {
             </div>
           </div>
           <div className="flex flex-col items-center justify-end">
-            <div className="p-4 rounded-full shadow-md w-fit  bg-[#ff7729]">
+            <div className="p-4 rounded-full shadow-md w-fit  bg-primary/30">
               <img className="w-10" src={passport4} alt="passport icon" />
             </div>
             <div className="p-3 rounded-md shadow-md text-center dark:bg-gray-800 mt-3 ">
@@ -178,7 +178,7 @@ const Main = ({ visas }) => {
       <section className="pb-10 md:pb-16 xl:pb-20 px-2">
         <div className="flex flex-col md:flex-row md:items-center justify-between">
           <div>
-            <p className="text-sm md:text-base text-secondary dark:text-gray-300 font-normal   pt-2">
+            <p className="text-base md:text-lg text-gray-600 dark:text-gray-300 font-normal   pt-2">
               Latest News & Blogs
             </p>
             <h1 className="text-2xl md:text-3xl lg:text-4xl text-secondary dark:text-white font-bold max-w-lg">

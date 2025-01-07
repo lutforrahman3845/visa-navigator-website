@@ -6,7 +6,7 @@ const About = () => {
         <h2 className="text-3xl font-bold text-gray-800 dark:text-white text-center mb-6">
           About US
         </h2>
-        <p className="text-lg text-gray-600 dark:text-gray-300 text-center mb-8">
+        <p className="text-base md:text-lg text-gray-600 dark:text-gray-300 text-center mb-12 max-w-4xl mx-auto ">
           Visify is your ultimate companion for navigating the complex
           world of visa applications. Whether you're planning a dream vacation,
           studying abroad, or moving for work, Visify is here to

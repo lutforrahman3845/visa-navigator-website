@@ -6,14 +6,14 @@ const AboutUS = () => {
     const navigate = useNavigate()
 
   return (
-    <section className="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-200 py-12 px-6 md:px-16 lg:px-32">
+    <section className="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-200 py-12 px-2 md:px-16 lg:px-32">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <header className="mb-12 text-center">
           <h1 className="text-4xl font-bold mb-4">
             About <span className="text-primary">Visify</span>
           </h1>
-          <p className="text-lg">
+          <p className="text-base md:text-lg text-gray-600 dark:text-gray-300">
             Navigating the complex world of visas made simple, reliable, and
             stress-free.
           </p>
@@ -132,7 +132,7 @@ const AboutUS = () => {
             travel and immigration industry, we are here to guide you every step
             of the way.
           </p>
-          <div className="flex gap-6 justify-center">
+          <div className="flex gap-3 md:gap-6 justify-center ">
             <div className="text-center">
               <div className="w-24 h-24 mx-auto rounded-full ">
                 <img src={ceo} alt="" className="w-full h-full object-cover rounded-full" />

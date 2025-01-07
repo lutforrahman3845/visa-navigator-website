@@ -13,6 +13,7 @@ import VisaDetails from "../Pages/VisaDetails";
 import MyAddedVisas from "../Pages/MyAddedVisas";
 import MyVisaApplication from "../Pages/MyVisaApplication";
 import AboutUS from "../Pages/AboutUS";
+import Contact from "../Pages/Contact";
 
 const router = createBrowserRouter([
     {
@@ -28,6 +29,11 @@ const router = createBrowserRouter([
         {
           path: "/about-us",
           element: <AboutUS></AboutUS>
+
+        },
+        {
+          path: "/contact-us",
+          element: <Contact/>
 
         },
         {
