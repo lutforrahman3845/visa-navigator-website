@@ -32,10 +32,12 @@
 
 ```plaintext
 ├── src
-│   ├── components       # Reusable React components
-│   ├── pages            # Individual pages for the application
-│   ├── context          # Context API for state management
 │   ├── assets           # Static assets (images, icons, etc.) 
+|   |── Components       # Reusable React components
+│   ├── pages            # Individual pages for the application
+|   ├── firebase         # frirebase keys
+│   ├── context          # Context API for state management
+│   ├── router           # Declear pages path or routes
 ├── public               # Public files for deployment
 └── package.json         # Project dependencies
 ```
@@ -61,8 +63,25 @@
    Open `http://localhost:5173` in your browser.
 
 ---
-4. **Server site repositories**:  
+5. **Server site repositories**:  
   https://github.com/lutforrahman3845/visa-navigator-server-site
+
+   **Install Dependencies**:  
+   ```bash
+   npm install
+   ```
+  **Start the Development Server**:  
+   ```bash
+   npm start 
+   ```
+   or 
+   ```bash
+   nodemon index.js
+   ```
+---
+## live site link 
+https://visa-navigator-65e95.web.app/
+
 ---
 
 ## 📝 Future Enhancements
