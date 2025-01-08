@@ -62,22 +62,8 @@
 4. **Access the App**:  
    Open `http://localhost:5173` in your browser.
 
----
 5. **Server site repositories**:  
   https://github.com/lutforrahman3845/visa-navigator-server-site
-
-   **Install Dependencies**:  
-   ```bash
-   npm install
-   ```
-  **Start the Development Server**:  
-   ```bash
-   npm start 
-   ```
-   or 
-   ```bash
-   nodemon index.js
-   ```
 ---
 ## live site link 
 https://visa-navigator-65e95.web.app/
