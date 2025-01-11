@@ -46,28 +46,46 @@
 
 ## 🌟 How to Run Locally
 
-1. **Install Dependencies**:  
+1.**Install Dependencies**:  
    ```bash
    npm install
    ```
 
-2. **Set Up Firebase and MongoDB**:  
+2.**Set Up Firebase and MongoDB**:  
    Configure Firebase authentication and MongoDB database in `.env` file.
 
-3. **Start the Development Server**:  
+3.**Start the Development Server**:  
    ```bash
    npm run dev
    ```
-
-4. **Access the App**:  
+4.**Access the App**:  
    Open `http://localhost:5173` in your browser.
+   
+ 5.**Packag Dependencies**
+  ```
+    "dependencies": {
+    "@headlessui/react": "^2.2.0",
+    "@heroicons/react": "^2.2.0",
+    "firebase": "^11.0.2",
+    "localforage": "^1.10.0",
+    "lottie-react": "^2.4.0",
+    "match-sorter": "^8.0.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^7.0.2",
+    "react-simple-typewriter": "^5.0.1",
+    "react-toastify": "^11.0.2",
+    "sort-by": "^1.2.0",
+    "sweetalert2": "^11.14.5",
+    "swiper": "^11.1.15"
+   },
+  ```
 
-5. **Server site repositories**:  
-  https://github.com/lutforrahman3845/visa-navigator-server-site
+6. **Server site repositories**:  
+    https://github.com/lutforrahman3845/visa-navigator-server-site
 ---
 ## live site link 
 https://visa-navigator-65e95.web.app/
-
 ---
 
 ## 📝 Future Enhancements
